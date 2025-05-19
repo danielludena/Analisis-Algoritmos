@@ -24,5 +24,39 @@ Un algoritmo debe ser rápido y usar la menor cantidad de recursos. Es una relac
 - **Mejor caso:** indica el menor tiempo obtenido, teniendo en consideración todas las entradas posibles.
 - **Media:** (Caso promedio), indica el tiempo medio obtenido, considerando todas las entradas posibles
 
+### Tarea 2:
 
+- Obtenga t(n) del siguiente algoritmo:
 
+```  
+procedure misterio(n: integer)
+var
+  contador, i, j, k: integer
+begin
+  contador := 0
+  for i := 1 to n - 1 do
+    for j := i + 1 to n do
+      for k := 1 to j do
+        contador := contador + 1
+end
+```
+
+El número total de veces que se ejecuta contador := contador + 1 es:
+
+![image](https://github.com/user-attachments/assets/0317bf69-ac19-4cc8-ac3b-5ae841d42225)
+
+La prueba de escritorio seria de la siguiente manera:
+
+```
+n = 3
+contador := 0
+
+i = 1:
+  j = 2 → k = 1,2 → contador += 2 → contador = 2
+  j = 3 → k = 1,2,3 → contador += 3 → contador = 5
+
+i = 2:
+  j = 3 → k = 1,2,3 → contador += 3 → contador = 8
+
+Resultado final: contador = 8
+```
