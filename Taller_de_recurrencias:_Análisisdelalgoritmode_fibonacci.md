@@ -37,99 +37,28 @@ Donde T(n) representa el tiempo para calcular f(n), y c representa el tiempo con
 
 La forma cerrada (fórmula de Binet) para calcular el n-ésimo término es:
 
-f(n)= 
-5
+f(n)= 51
 ​
- 
-1
-​
- (ϕ 
-n
- − 
-ϕ
-^
-​
-  
-n
- )
+(ϕ n− ϕ^n)
+
 Donde:
 
-𝜙
-=
-1
-+
-5
-2
-ϕ= 
-2
-1+ 
-5
-​
- 
-​
+𝜙=1+52ϕ= 21+ 5 
+
   es la razón áurea
 
-𝜙
-^
-=
-1
-−
-5
-2
-ϕ
-^
+𝜙^=1−52ϕ^=21−5
 ​
- = 
-2
-1− 
-5
-​
- 
 ​4. Demostración formal
 Se puede demostrar por inducción matemática que:
 
-𝑓
-(
-0
-)
-=
-0
-f(0)=0, 
-𝑓
-(
-1
-)
-=
-1
+𝑓(0)=0f(0)=0, 𝑓(1)=1
 f(1)=1
 
 Si se asume que 
-𝑓
-(
-𝑘
-)
-=
-𝑓
-(
-𝑘
-−
-1
-)
-+
-𝑓
-(
-𝑘
-−
-2
-)
-f(k)=f(k−1)+f(k−2) para algún 
-𝑘
-≥
-2
-k≥2, entonces también se cumple para 
-𝑘
-+
-1
+𝑓(𝑘)=𝑓(𝑘−1)+𝑓(𝑘−2)
+f(k)=f(k−1)+f(k−2) para algún 𝑘≥2
+k≥2, entonces también se cumple para 𝑘+1
 k+1, lo que completa la demostración por inducción.
 
 Además, se puede demostrar que la fórmula cerrada satisface la misma recurrencia, utilizando álgebra.
@@ -137,29 +66,10 @@ Además, se puede demostrar que la fórmula cerrada satisface la misma recurrenc
 5. Complejidad
 La versión recursiva sin optimización tiene una complejidad exponencial:
 
-𝑇
-(
-𝑛
-)
-∈
-𝑂
-(
-2
-𝑛
-)
-T(n)∈O(2 
-n
- )
+𝑇(𝑛)∈𝑂(2𝑛)
+T(n)∈O(2 n)
 Esto se debe a que se repiten múltiples llamadas a los mismos subproblemas. Una forma eficiente de resolver el problema es utilizar programación dinámica, lo que reduce la complejidad a:
 
-𝑇
-(
-𝑛
-)
-∈
-𝑂
-(
-𝑛
-)
+𝑇(𝑛)∈𝑂(𝑛)
 T(n)∈O(n)
 
